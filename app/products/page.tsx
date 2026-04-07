@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import ProductOrderForm from "@/components/ProductOrderForm";
 
 export const metadata = {
   title: "Our Products - NdujaLovers",
@@ -330,20 +331,27 @@ export default function ProductsPage() {
         </div>
       </section>
 
+      {/* Order Form */}
+      <section className="py-20 px-4 bg-gradient-to-br from-orange-50 to-red-50">
+        <div className="max-w-3xl mx-auto">
+          <ProductOrderForm />
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 px-4 bg-gradient-to-r from-orange-500 to-red-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Order?
+            Domande o Ordini Speciali?
           </h2>
           <p className="text-xl mb-8">
-            Get authentic Calabrian 'nduja delivered to your door
+            Contattaci per ordini all'ingrosso o informazioni aggiuntive
           </p>
           <Link
             href="/contact"
             className="inline-block bg-white text-red-600 px-10 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-2xl"
           >
-            Contact Us for Orders
+            Pagina Contatti
           </Link>
           <p className="mt-6 text-sm text-white/80">
             Wholesale inquiries welcome • Ships to all 50 states

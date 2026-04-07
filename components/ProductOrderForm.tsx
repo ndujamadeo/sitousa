@@ -3,11 +3,11 @@
 import { useState } from 'react';
 
 const products = [
-  'Secchiello Piccolo (Mild)',
-  'Vasetto \'Nduja (Classic)',
-  'Secchiello Medio (Medium-Hot)',
-  'Squeeze Piccolo (Hot)',
-  'Squeeze Grande (Extra Hot)',
+  'Small Bucket (Mild)',
+  '\'Nduja Jar (Classic)',
+  'Medium Bucket (Medium-Hot)',
+  'Small Squeeze (Hot)',
+  'Large Squeeze (Extra Hot)',
 ];
 
 export default function ProductOrderForm() {

@@ -27,18 +27,18 @@ export default function ProductsPage() {
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {/* Secchiello Piccolo - Mild */}
+            {/* Small Bucket - Mild */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
               <div className="relative h-80 bg-gradient-to-br from-orange-50 to-amber-50">
                 <Image
                   src="/products/secchiello-piccolo.jpg"
-                  alt="Secchiello Piccolo - Mild 'Nduja"
+                  alt="Small Bucket - Mild 'Nduja"
                   fill
                   className="object-contain p-6"
                 />
               </div>
               <div className="p-8">
-                <h3 className="text-3xl font-bold text-gray-900 mb-3">Secchiello Piccolo</h3>
+                <h3 className="text-3xl font-bold text-gray-900 mb-3">Small Bucket</h3>
                 <div className="flex items-center mb-4">
                   <span className="text-red-600 font-bold text-xl">🌶️🌶️</span>
                   <span className="ml-2 text-gray-600">Mild Heat</span>
@@ -66,18 +66,18 @@ export default function ProductsPage() {
               </div>
             </div>
 
-            {/* Vasetto - Classic */}
+            {/* 'Nduja Jar - Classic */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
               <div className="relative h-80 bg-gradient-to-br from-red-50 to-orange-50">
                 <Image
                   src="/products/vasetto-nduja.jpg"
-                  alt="Vasetto 'Nduja - Classic"
+                  alt="'Nduja Jar - Classic"
                   fill
                   className="object-contain p-6"
                 />
               </div>
               <div className="p-8">
-                <h3 className="text-3xl font-bold text-gray-900 mb-3">Vasetto 'Nduja</h3>
+                <h3 className="text-3xl font-bold text-gray-900 mb-3">'Nduja Jar</h3>
                 <div className="flex items-center mb-4">
                   <span className="text-red-600 font-bold text-xl">🌶️🌶️🌶️</span>
                   <span className="ml-2 text-gray-600">Classic Heat</span>
@@ -105,18 +105,18 @@ export default function ProductsPage() {
               </div>
             </div>
 
-            {/* Secchiello Medio - Medium-Hot */}
+            {/* Medium Bucket - Medium-Hot */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
               <div className="relative h-80 bg-gradient-to-br from-red-50 to-pink-50">
                 <Image
                   src="/products/secchiello-medio.jpg"
-                  alt="Secchiello Medio - Medium-Hot 'Nduja"
+                  alt="Medium Bucket - Medium-Hot 'Nduja"
                   fill
                   className="object-contain p-6"
                 />
               </div>
               <div className="p-8">
-                <h3 className="text-3xl font-bold text-gray-900 mb-3">Secchiello Medio</h3>
+                <h3 className="text-3xl font-bold text-gray-900 mb-3">Medium Bucket</h3>
                 <div className="flex items-center mb-4">
                   <span className="text-red-600 font-bold text-xl">🌶️🌶️🌶️🌶️</span>
                   <span className="ml-2 text-gray-600">Medium-Hot</span>
@@ -144,18 +144,18 @@ export default function ProductsPage() {
               </div>
             </div>
 
-            {/* Squeeze Piccolo - Hot */}
+            {/* Small Squeeze - Hot */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
               <div className="relative h-80 bg-gradient-to-br from-red-100 to-orange-50">
                 <Image
                   src="/products/squeeze-piccolo.jpg"
-                  alt="Squeeze Piccolo - Hot 'Nduja"
+                  alt="Small Squeeze - Hot 'Nduja"
                   fill
                   className="object-contain p-6"
                 />
               </div>
               <div className="p-8">
-                <h3 className="text-3xl font-bold text-gray-900 mb-3">Squeeze Piccolo</h3>
+                <h3 className="text-3xl font-bold text-gray-900 mb-3">Small Squeeze</h3>
                 <div className="flex items-center mb-4">
                   <span className="text-red-600 font-bold text-xl">🌶️🌶️🌶️🌶️</span>
                   <span className="ml-2 text-gray-600">Hot</span>
@@ -183,7 +183,7 @@ export default function ProductsPage() {
               </div>
             </div>
 
-            {/* Squeeze Grande - Extra Hot */}
+            {/* Large Squeeze - Extra Hot */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow border-2 border-red-600">
               <div className="bg-red-600 text-white text-center py-2 font-bold">
                 🔥 EXTREME HEAT ALERT 🔥
@@ -191,13 +191,13 @@ export default function ProductsPage() {
               <div className="relative h-80 bg-gradient-to-br from-red-100 to-red-50">
                 <Image
                   src="/products/squeeze-grande.jpg"
-                  alt="Squeeze Grande - Extra Hot 'Nduja"
+                  alt="Large Squeeze - Extra Hot 'Nduja"
                   fill
                   className="object-contain p-6"
                 />
               </div>
               <div className="p-8">
-                <h3 className="text-3xl font-bold text-gray-900 mb-3">Squeeze Grande</h3>
+                <h3 className="text-3xl font-bold text-gray-900 mb-3">Large Squeeze</h3>
                 <div className="flex items-center mb-4">
                   <span className="text-red-600 font-bold text-xl">🌶️🌶️🌶️🌶️🌶️</span>
                   <span className="ml-2 text-gray-600">Extra Hot</span>

@@ -72,23 +72,23 @@ export default function ProductOrderForm() {
     <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Prenota i Tuoi Prodotti
+          Order Your Products
         </h2>
         <p className="text-lg text-gray-600">
-          Compila il form e ti contatteremo per finalizzare l'ordine
+          Fill out the form and we'll contact you to finalize your order
         </p>
       </div>
 
       {status === 'success' && (
         <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-          <p className="text-green-800 font-semibold">✓ Richiesta inviata con successo!</p>
-          <p className="text-green-700 text-sm mt-1">Ti contatteremo presto via email.</p>
+          <p className="text-green-800 font-semibold">✓ Request sent successfully!</p>
+          <p className="text-green-700 text-sm mt-1">We'll contact you soon via email.</p>
         </div>
       )}
 
       {status === 'error' && (
         <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-          <p className="text-red-800 font-semibold">✗ Errore nell'invio</p>
+          <p className="text-red-800 font-semibold">✗ Error sending form</p>
           <p className="text-red-700 text-sm mt-1">{errorMessage}</p>
         </div>
       )}
@@ -97,7 +97,7 @@ export default function ProductOrderForm() {
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="name" className="block text-sm font-bold text-gray-900 mb-2">
-              Nome e Cognome *
+              Full Name *
             </label>
             <input
               type="text"
@@ -107,7 +107,7 @@ export default function ProductOrderForm() {
               value={formData.name}
               onChange={handleChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
-              placeholder="Mario Rossi"
+              placeholder="John Smith"
             />
           </div>
 
@@ -123,7 +123,7 @@ export default function ProductOrderForm() {
               value={formData.email}
               onChange={handleChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
-              placeholder="mario@example.com"
+              placeholder="john@example.com"
             />
           </div>
         </div>
@@ -131,7 +131,7 @@ export default function ProductOrderForm() {
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="phone" className="block text-sm font-bold text-gray-900 mb-2">
-              Telefono
+              Phone
             </label>
             <input
               type="tel"
@@ -146,7 +146,7 @@ export default function ProductOrderForm() {
 
           <div>
             <label htmlFor="quantity" className="block text-sm font-bold text-gray-900 mb-2">
-              Quantità
+              Quantity
             </label>
             <input
               type="number"
@@ -162,7 +162,7 @@ export default function ProductOrderForm() {
 
         <div>
           <label htmlFor="product" className="block text-sm font-bold text-gray-900 mb-2">
-            Seleziona Prodotto *
+            Select Product *
           </label>
           <select
             id="product"
@@ -172,7 +172,7 @@ export default function ProductOrderForm() {
             onChange={handleChange}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all bg-white"
           >
-            <option value="">-- Scegli un prodotto --</option>
+            <option value="">-- Choose a product --</option>
             {products.map((product) => (
               <option key={product} value={product}>
                 {product}
@@ -183,7 +183,7 @@ export default function ProductOrderForm() {
 
         <div>
           <label htmlFor="message" className="block text-sm font-bold text-gray-900 mb-2">
-            Note o Richieste Speciali
+            Special Notes or Requests
           </label>
           <textarea
             id="message"
@@ -192,7 +192,7 @@ export default function ProductOrderForm() {
             value={formData.message}
             onChange={handleChange}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all resize-none"
-            placeholder="Aggiungi eventuali note o richieste speciali..."
+            placeholder="Add any special notes or requests..."
           />
         </div>
 
@@ -207,15 +207,15 @@ export default function ProductOrderForm() {
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
               </svg>
-              Invio in corso...
+              Sending...
             </span>
           ) : (
-            'Invia Richiesta'
+            'Submit Request'
           )}
         </button>
 
         <p className="text-center text-sm text-gray-500">
-          * Campi obbligatori. Ti contatteremo entro 24 ore.
+          * Required fields. We'll contact you within 24 hours.
         </p>
       </form>
     </div>

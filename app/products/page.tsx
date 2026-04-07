@@ -342,16 +342,16 @@ export default function ProductsPage() {
       <section className="py-20 px-4 bg-gradient-to-r from-orange-500 to-red-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Domande o Ordini Speciali?
+            Questions or Special Orders?
           </h2>
           <p className="text-xl mb-8">
-            Contattaci per ordini all'ingrosso o informazioni aggiuntive
+            Contact us for wholesale orders or additional information
           </p>
           <Link
             href="/contact"
             className="inline-block bg-white text-red-600 px-10 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-2xl"
           >
-            Pagina Contatti
+            Contact Page
           </Link>
           <p className="mt-6 text-sm text-white/80">
             Wholesale inquiries welcome • Ships to all 50 states

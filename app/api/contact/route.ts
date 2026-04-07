@@ -12,7 +12,7 @@ export async function POST(request: Request) {
     // Validate required fields
     if (!name || !email || !product) {
       return NextResponse.json(
-        { error: 'Nome, email e prodotto sono obbligatori' },
+        { error: 'Name, email, and product are required' },
         { status: 400 }
       );
     }
@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 're_dummy_key_for_build') {
       console.error('RESEND_API_KEY not configured');
       return NextResponse.json(
-        { error: 'Servizio email non configurato. Contattaci direttamente a info@filieramadeo.it' },
+        { error: 'Email service not configured. Please contact us directly at info@filieramadeo.it' },
         { status: 503 }
       );
     }
@@ -31,38 +31,38 @@ export async function POST(request: Request) {
       from: 'NdujaLovers <onboarding@resend.dev>', // You'll need to update this with your verified domain
       to: ['info@filieramadeo.it'],
       replyTo: email,
-      subject: `Nuova richiesta prodotto: ${product}`,
+      subject: `New Product Order Request: ${product}`,
       html: `
-        <h2>Nuova richiesta di prenotazione prodotto</h2>
-        <p><strong>Prodotto:</strong> ${product}</p>
-        <p><strong>Quantità:</strong> ${quantity || 'Non specificata'}</p>
+        <h2>New Product Order Request</h2>
+        <p><strong>Product:</strong> ${product}</p>
+        <p><strong>Quantity:</strong> ${quantity || 'Not specified'}</p>
         <hr />
-        <h3>Informazioni cliente</h3>
-        <p><strong>Nome:</strong> ${name}</p>
+        <h3>Customer Information</h3>
+        <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Telefono:</strong> ${phone || 'Non fornito'}</p>
-        ${message ? `<hr /><h3>Messaggio</h3><p>${message}</p>` : ''}
+        <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+        ${message ? `<hr /><h3>Message</h3><p>${message}</p>` : ''}
         <hr />
-        <p style="color: #666; font-size: 12px;">Inviato da NdujaLovers.com</p>
+        <p style="color: #666; font-size: 12px;">Sent from NdujaLovers.com</p>
       `,
     });
 
     if (error) {
       console.error('Resend error:', error);
       return NextResponse.json(
-        { error: 'Errore nell\'invio dell\'email' },
+        { error: 'Error sending email' },
         { status: 500 }
       );
     }
 
     return NextResponse.json(
-      { message: 'Email inviata con successo', data },
+      { message: 'Email sent successfully', data },
       { status: 200 }
     );
   } catch (error) {
     console.error('Error sending email:', error);
     return NextResponse.json(
-      { error: 'Errore nel processare la richiesta' },
+      { error: 'Error processing request' },
       { status: 500 }
     );
   }

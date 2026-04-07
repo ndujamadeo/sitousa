@@ -1,7 +1,8 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Use dummy key during build if not set
+const resend = new Resend(process.env.RESEND_API_KEY || 're_dummy_key_for_build');
 
 export async function POST(request: Request) {
   try {
@@ -13,6 +14,15 @@ export async function POST(request: Request) {
       return NextResponse.json(
         { error: 'Nome, email e prodotto sono obbligatori' },
         { status: 400 }
+      );
+    }
+
+    // Check if API key is configured
+    if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 're_dummy_key_for_build') {
+      console.error('RESEND_API_KEY not configured');
+      return NextResponse.json(
+        { error: 'Servizio email non configurato. Contattaci direttamente a info@filieramadeo.it' },
+        { status: 503 }
       );
     }
 

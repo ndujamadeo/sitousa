@@ -1,9 +1,9 @@
 import Link from "next/link";
-import ProductSVG from "@/components/ProductSVG";
+import Image from "next/image";
 
 export const metadata = {
   title: "Our Products - NdujaLovers",
-  description: "Explore our range of authentic Calabrian 'nduja from Filiera Madeo. From Classic to Extra Hot, find your perfect level of spice. Premium quality, traditional recipes from San Demetrio Corone.",
+  description: "Explore our range of authentic Calabrian 'nduja from Filiera Madeo. From Mild to Extra Hot, find your perfect level of spice. Premium quality, traditional recipes from San Demetrio Corone.",
 };
 
 export default function ProductsPage() {
@@ -25,28 +25,72 @@ export default function ProductsPage() {
       {/* Products Grid */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {/* Classic 'Nduja */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {/* Secchiello Piccolo - Mild */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
-              <div className="relative h-80 bg-gradient-to-br from-red-50 to-orange-50">
-                <ProductSVG variant="classic" />
+              <div className="relative h-80 bg-gradient-to-br from-orange-50 to-amber-50">
+                <Image
+                  src="/products/secchiello-piccolo.jpg"
+                  alt="Secchiello Piccolo - Mild 'Nduja"
+                  fill
+                  className="object-contain p-6"
+                />
               </div>
               <div className="p-8">
-                <h3 className="text-3xl font-bold text-gray-900 mb-3">Classic 'Nduja</h3>
+                <h3 className="text-3xl font-bold text-gray-900 mb-3">Secchiello Piccolo</h3>
                 <div className="flex items-center mb-4">
-                  <span className="text-red-600 font-bold text-xl">🌶️🌶️🌶️</span>
-                  <span className="ml-2 text-gray-600">Medium Heat</span>
+                  <span className="text-red-600 font-bold text-xl">🌶️🌶️</span>
+                  <span className="ml-2 text-gray-600">Mild Heat</span>
                 </div>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Our flagship 'nduja delivers authentic Calabrian heat with rich, savory notes
-                  of premium pork and sun-dried peppers. Perfect for those seeking genuine Italian
-                  flavor without overwhelming spice. Aged 3 months for optimal taste.
+                  Perfect for families and those new to 'nduja. This small bucket format preserves
+                  all the rich, savory flavors of traditional Calabrian salumi with a gentle warming
+                  sensation. Ideal for introducing friends to this Italian treasure.
                 </p>
 
                 <div className="mb-6">
                   <h4 className="font-bold text-gray-900 mb-2">Perfect For:</h4>
                   <ul className="space-y-2 text-gray-700">
-                    <li>• Spreading on crusty sourdough with honey drizzle</li>
+                    <li>• Family-friendly pasta dishes</li>
+                    <li>• Sandwich spread instead of mayo</li>
+                    <li>• Cheese board centerpiece</li>
+                    <li>• Baked potato or sweet potato topper</li>
+                  </ul>
+                </div>
+
+                <div className="border-t pt-4 text-sm text-gray-600">
+                  <p><strong>Ingredients:</strong> Pork, mild Calabrian peppers, sea salt, natural spices</p>
+                  <p className="mt-2"><strong>Origin:</strong> San Demetrio Corone, Calabria, Italy</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Vasetto - Classic */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
+              <div className="relative h-80 bg-gradient-to-br from-red-50 to-orange-50">
+                <Image
+                  src="/products/vasetto-nduja.jpg"
+                  alt="Vasetto 'Nduja - Classic"
+                  fill
+                  className="object-contain p-6"
+                />
+              </div>
+              <div className="p-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-3">Vasetto 'Nduja</h3>
+                <div className="flex items-center mb-4">
+                  <span className="text-red-600 font-bold text-xl">🌶️🌶️🌶️</span>
+                  <span className="ml-2 text-gray-600">Classic Heat</span>
+                </div>
+                <p className="text-gray-700 mb-6 leading-relaxed">
+                  Our flagship format delivers authentic Calabrian heat with rich, savory notes
+                  of premium pork and sun-dried peppers. The traditional jar preserves the artisanal
+                  quality. Perfect for those seeking genuine Italian flavor. Aged for optimal taste.
+                </p>
+
+                <div className="mb-6">
+                  <h4 className="font-bold text-gray-900 mb-2">Perfect For:</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Spreading on crusty sourdough with honey</li>
                     <li>• Swirling into risotto for instant depth</li>
                     <li>• Melting over pizza or flatbread</li>
                     <li>• Mixing into pasta sauces</li>
@@ -55,78 +99,127 @@ export default function ProductsPage() {
 
                 <div className="border-t pt-4 text-sm text-gray-600">
                   <p><strong>Ingredients:</strong> Pork, Calabrian hot peppers, sea salt, natural spices</p>
-                  <p className="mt-2"><strong>Origin:</strong> Spilinga, Calabria, Italy</p>
+                  <p className="mt-2"><strong>Origin:</strong> San Demetrio Corone, Calabria, Italy</p>
                 </div>
               </div>
             </div>
 
-            {/* Mild 'Nduja */}
+            {/* Secchiello Medio - Medium-Hot */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
-              <div className="relative h-80 bg-gradient-to-br from-orange-50 to-amber-50">
-                <ProductSVG variant="mild" />
+              <div className="relative h-80 bg-gradient-to-br from-red-50 to-pink-50">
+                <Image
+                  src="/products/secchiello-medio.jpg"
+                  alt="Secchiello Medio - Medium-Hot 'Nduja"
+                  fill
+                  className="object-contain p-6"
+                />
               </div>
               <div className="p-8">
-                <h3 className="text-3xl font-bold text-gray-900 mb-3">Mild 'Nduja</h3>
+                <h3 className="text-3xl font-bold text-gray-900 mb-3">Secchiello Medio</h3>
                 <div className="flex items-center mb-4">
-                  <span className="text-red-600 font-bold text-xl">🌶️🌶️</span>
-                  <span className="ml-2 text-gray-600">Gentle Heat</span>
+                  <span className="text-red-600 font-bold text-xl">🌶️🌶️🌶️🌶️</span>
+                  <span className="ml-2 text-gray-600">Medium-Hot</span>
                 </div>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Crafted for spice-sensitive palates, our Mild 'Nduja preserves all the complex
-                  flavors of traditional Calabrian salumi with a gentle warming sensation. Ideal
-                  for introducing family and friends to this Italian treasure.
+                  Our medium bucket offers the perfect balance of heat and flavor. Ideal for
+                  families who love bold taste and regular 'nduja enthusiasts. The larger format
+                  ensures you never run out during dinner parties.
                 </p>
 
                 <div className="mb-6">
                   <h4 className="font-bold text-gray-900 mb-2">Perfect For:</h4>
                   <ul className="space-y-2 text-gray-700">
-                    <li>• Family-friendly pasta dishes</li>
-                    <li>• Sandwich spread instead of mayo</li>
-                    <li>• Baked potato or sweet potato topper</li>
-                    <li>• Cheese board centerpiece</li>
+                    <li>• Bold pasta dishes and sauces</li>
+                    <li>• Grilling season marinades</li>
+                    <li>• Dinner parties and gatherings</li>
+                    <li>• Regular 'nduja enthusiasts</li>
                   </ul>
                 </div>
 
                 <div className="border-t pt-4 text-sm text-gray-600">
-                  <p><strong>Ingredients:</strong> Pork, mild Calabrian peppers, sea salt, natural spices</p>
-                  <p className="mt-2"><strong>Origin:</strong> Spilinga, Calabria, Italy</p>
+                  <p><strong>Ingredients:</strong> Pork, Calabrian hot peppers, sea salt, natural spices</p>
+                  <p className="mt-2"><strong>Origin:</strong> San Demetrio Corone, Calabria, Italy</p>
                 </div>
               </div>
             </div>
 
-            {/* Extra Hot 'Nduja */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow border-2 border-red-600">
-              <div className="bg-red-600 text-white text-center py-2 font-bold">
-                🔥 SPICY ALERT 🔥
-              </div>
-              <div className="relative h-80 bg-gradient-to-br from-red-100 to-red-50">
-                <ProductSVG variant="hot" />
+            {/* Squeeze Piccolo - Hot */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
+              <div className="relative h-80 bg-gradient-to-br from-red-100 to-orange-50">
+                <Image
+                  src="/products/squeeze-piccolo.jpg"
+                  alt="Squeeze Piccolo - Hot 'Nduja"
+                  fill
+                  className="object-contain p-6"
+                />
               </div>
               <div className="p-8">
-                <h3 className="text-3xl font-bold text-gray-900 mb-3">Extra Hot 'Nduja</h3>
+                <h3 className="text-3xl font-bold text-gray-900 mb-3">Squeeze Piccolo</h3>
                 <div className="flex items-center mb-4">
-                  <span className="text-red-600 font-bold text-xl">🌶️🌶️🌶️🌶️🌶️</span>
-                  <span className="ml-2 text-gray-600">Intense Heat</span>
+                  <span className="text-red-600 font-bold text-xl">🌶️🌶️🌶️🌶️</span>
+                  <span className="ml-2 text-gray-600">Hot</span>
                 </div>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Challenge accepted! Our Extra Hot 'Nduja packs serious Calabrian pepper punch
-                  while maintaining rich, meaty complexity. Made with additional peperoncino for
-                  thrill-seekers and heat enthusiasts. Not for the faint of heart!
+                  The convenient squeeze format meets serious heat. Perfect for precise application
+                  and everyday use. This portable size is ideal for spice lovers who want authentic
+                  Calabrian fire on demand. Keep it in your kitchen arsenal.
                 </p>
 
                 <div className="mb-6">
                   <h4 className="font-bold text-gray-900 mb-2">Perfect For:</h4>
                   <ul className="space-y-2 text-gray-700">
-                    <li>• Bold pasta dishes (arrabbiata on steroids)</li>
-                    <li>• Spicy wings alternative</li>
-                    <li>• Bloody Mary garnish</li>
-                    <li>• Challenging your friends!</li>
+                    <li>• Precise pizza topping application</li>
+                    <li>• Quick pasta sauce enhancement</li>
+                    <li>• Take to BBQs and picnics</li>
+                    <li>• Everyday spice enthusiasts</li>
                   </ul>
                 </div>
 
                 <div className="border-t pt-4 text-sm text-gray-600">
                   <p><strong>Ingredients:</strong> Pork, extra Calabrian hot peppers, sea salt, natural spices</p>
-                  <p className="mt-2"><strong>Origin:</strong> Spilinga, Calabria, Italy</p>
+                  <p className="mt-2"><strong>Origin:</strong> San Demetrio Corone, Calabria, Italy</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Squeeze Grande - Extra Hot */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow border-2 border-red-600">
+              <div className="bg-red-600 text-white text-center py-2 font-bold">
+                🔥 EXTREME HEAT ALERT 🔥
+              </div>
+              <div className="relative h-80 bg-gradient-to-br from-red-100 to-red-50">
+                <Image
+                  src="/products/squeeze-grande.jpg"
+                  alt="Squeeze Grande - Extra Hot 'Nduja"
+                  fill
+                  className="object-contain p-6"
+                />
+              </div>
+              <div className="p-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-3">Squeeze Grande</h3>
+                <div className="flex items-center mb-4">
+                  <span className="text-red-600 font-bold text-xl">🌶️🌶️🌶️🌶️🌶️</span>
+                  <span className="ml-2 text-gray-600">Extra Hot</span>
+                </div>
+                <p className="text-gray-700 mb-6 leading-relaxed">
+                  For true heat warriors! Our largest squeeze bottle packs maximum Calabrian pepper
+                  punch while maintaining rich, meaty complexity. Made with additional peperoncino
+                  for thrill-seekers. The convenient format meets extreme heat. Not for the faint of heart!
+                </p>
+
+                <div className="mb-6">
+                  <h4 className="font-bold text-gray-900 mb-2">Perfect For:</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Extreme spice challenges</li>
+                    <li>• Bold pasta arrabbiata</li>
+                    <li>• Bloody Mary garnish</li>
+                    <li>• Heat enthusiast's pantry staple</li>
+                  </ul>
+                </div>
+
+                <div className="border-t pt-4 text-sm text-gray-600">
+                  <p><strong>Ingredients:</strong> Pork, extra extra Calabrian hot peppers, sea salt, natural spices</p>
+                  <p className="mt-2"><strong>Origin:</strong> San Demetrio Corone, Calabria, Italy</p>
                 </div>
               </div>
             </div>
